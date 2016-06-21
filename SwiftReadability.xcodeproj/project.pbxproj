@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		891E483B1D18BDD5003205F5 /* SwiftReadability.h in Headers */ = {isa = PBXBuildFile; fileRef = 891E483A1D18BDD5003205F5 /* SwiftReadability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89DDEBA71D18C5ED0043F6AD /* ReadabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */; };
+		89DDEBAA1D18C63B0043F6AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DDEBA91D18C63B0043F6AD /* UIKit.framework */; };
+		89DDEBAC1D18C6420043F6AD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DDEBAB1D18C6420043F6AD /* WebKit.framework */; };
+		89DDEBAE1D18C8D90043F6AD /* Readability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDEBAD1D18C8D90043F6AD /* Readability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		891E48371D18BDD5003205F5 /* SwiftReadability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftReadability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891E483A1D18BDD5003205F5 /* SwiftReadability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftReadability.h; sourceTree = "<group>"; };
 		891E483C1D18BDD5003205F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		891E48421D18C22C003205F5 /* SwiftReadability.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftReadability.playground; sourceTree = "<group>"; };
+		89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadabilityViewController.swift; sourceTree = "<group>"; };
+		89DDEBA91D18C63B0043F6AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		89DDEBAB1D18C6420043F6AD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		89DDEBAD1D18C8D90043F6AD /* Readability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Readability.swift; sourceTree = "<group>"; };
+		89DDEBAF1D18CBBB0043F6AD /* Mustache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mustache.framework; path = Carthage/Build/iOS/Mustache.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DDEBAC1D18C6420043F6AD /* WebKit.framework in Frameworks */,
+				89DDEBAA1D18C63B0043F6AD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,8 +42,10 @@
 		891E482D1D18BDD5003205F5 = {
 			isa = PBXGroup;
 			children = (
+				891E48421D18C22C003205F5 /* SwiftReadability.playground */,
 				891E48391D18BDD5003205F5 /* SwiftReadability */,
 				891E48381D18BDD5003205F5 /* Products */,
+				89DDEBA81D18C63B0043F6AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,9 +61,21 @@
 			isa = PBXGroup;
 			children = (
 				891E483A1D18BDD5003205F5 /* SwiftReadability.h */,
+				89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */,
+				89DDEBAD1D18C8D90043F6AD /* Readability.swift */,
 				891E483C1D18BDD5003205F5 /* Info.plist */,
 			);
 			path = SwiftReadability;
+			sourceTree = "<group>";
+		};
+		89DDEBA81D18C63B0043F6AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89DDEBAF1D18CBBB0043F6AD /* Mustache.framework */,
+				89DDEBAB1D18C6420043F6AD /* WebKit.framework */,
+				89DDEBA91D18C63B0043F6AD /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +123,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = U88Q589DZB;
 						DevelopmentTeamName = "Chloe Horgan";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -133,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DDEBAE1D18C8D90043F6AD /* Readability.swift in Sources */,
+				89DDEBA71D18C5ED0043F6AD /* ReadabilityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,16 +266,23 @@
 		891E48401D18BDD5003205F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftReadability/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chloehorgan.SwiftReadability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -254,12 +290,18 @@
 		891E48411D18BDD5003205F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftReadability/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chloehorgan.SwiftReadability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +329,7 @@
 				891E48411D18BDD5003205F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
