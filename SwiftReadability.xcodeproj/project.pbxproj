@@ -12,6 +12,11 @@
 		89DDEBAA1D18C63B0043F6AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DDEBA91D18C63B0043F6AD /* UIKit.framework */; };
 		89DDEBAC1D18C6420043F6AD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DDEBAB1D18C6420043F6AD /* WebKit.framework */; };
 		89DDEBAE1D18C8D90043F6AD /* Readability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDEBAD1D18C8D90043F6AD /* Readability.swift */; };
+		89DDEBB61D1B54790043F6AD /* SwiftReadability.css in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB11D1B54790043F6AD /* SwiftReadability.css */; };
+		89DDEBB71D1B54790043F6AD /* readability_initialization.js in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB21D1B54790043F6AD /* readability_initialization.js */; };
+		89DDEBB81D1B54790043F6AD /* Readability.js in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB31D1B54790043F6AD /* Readability.js */; };
+		89DDEBB91D1B54790043F6AD /* Reader.css in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB41D1B54790043F6AD /* Reader.css */; };
+		89DDEBBA1D1B54790043F6AD /* Reader.html.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB51D1B54790043F6AD /* Reader.html.mustache */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		89DDEBAB1D18C6420043F6AD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		89DDEBAD1D18C8D90043F6AD /* Readability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Readability.swift; sourceTree = "<group>"; };
 		89DDEBAF1D18CBBB0043F6AD /* Mustache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mustache.framework; path = Carthage/Build/iOS/Mustache.framework; sourceTree = "<group>"; };
+		89DDEBB11D1B54790043F6AD /* SwiftReadability.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = SwiftReadability.css; sourceTree = "<group>"; };
+		89DDEBB21D1B54790043F6AD /* readability_initialization.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = readability_initialization.js; sourceTree = "<group>"; };
+		89DDEBB31D1B54790043F6AD /* Readability.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Readability.js; sourceTree = "<group>"; };
+		89DDEBB41D1B54790043F6AD /* Reader.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Reader.css; sourceTree = "<group>"; };
+		89DDEBB51D1B54790043F6AD /* Reader.html.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Reader.html.mustache; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 		891E48391D18BDD5003205F5 /* SwiftReadability */ = {
 			isa = PBXGroup;
 			children = (
+				89DDEBB11D1B54790043F6AD /* SwiftReadability.css */,
+				89DDEBB21D1B54790043F6AD /* readability_initialization.js */,
+				89DDEBB31D1B54790043F6AD /* Readability.js */,
+				89DDEBB41D1B54790043F6AD /* Reader.css */,
+				89DDEBB51D1B54790043F6AD /* Reader.html.mustache */,
 				891E483A1D18BDD5003205F5 /* SwiftReadability.h */,
 				89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */,
 				89DDEBAD1D18C8D90043F6AD /* Readability.swift */,
@@ -150,6 +165,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DDEBB91D1B54790043F6AD /* Reader.css in Resources */,
+				89DDEBBA1D1B54790043F6AD /* Reader.html.mustache in Resources */,
+				89DDEBB61D1B54790043F6AD /* SwiftReadability.css in Resources */,
+				89DDEBB81D1B54790043F6AD /* Readability.js in Resources */,
+				89DDEBB71D1B54790043F6AD /* readability_initialization.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

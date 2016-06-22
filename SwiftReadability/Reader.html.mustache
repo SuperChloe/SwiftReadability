@@ -1,0 +1,33 @@
+{{! Forked off https://github.com/mozilla/firefox-ios/blob/5238e873e77e9ad3e699f926d12f61ccafabdc11/Client/Frontend/Reader/Reader.html }}
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+ - License, v. 2.0. If a copy of the MPL was not distributed with this
+ - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=.25, maximum-scale=1.6, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="/reader-mode/styles/Reader.css"/>
+        <style>
+            {{{ css }}}
+        </style>
+        <title>{{ title }}</title>
+    </head>
+    
+    <body data-readerStyle='{{ style }}'>
+        <div id="reader-header" class="header">
+            <h1 id="reader-title">{{ title }}</h1>
+            <div id="reader-credits" class="credits">{{ credits }}</div>
+        </div>
+        
+        <div id="reader-content" class="content">
+            {{{ content }}}
+        </div>
+        
+        <div id="reader-message" class="message">
+            {{ message }}
+        </div>
+        
+    </body>
+    
+</html>

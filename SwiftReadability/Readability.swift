@@ -13,7 +13,7 @@ public class Readability: NSObject, WKNavigationDelegate {
     private let webView: WKWebView
     private let completionHandler: ((content: String?, error: NSError?) -> Void)
     
-    init(url: NSURL, completionHandler: (content: String?, error: NSError?) -> Void) {
+    init(url: URL, completionHandler: (content: String?, error: NSError?) -> Void) {
 
         self.completionHandler = completionHandler
         
@@ -23,6 +23,22 @@ public class Readability: NSObject, WKNavigationDelegate {
         
         webView.configuration.suppressesIncrementalRendering = true
         webView.navigationDelegate = self
+        
+        addReadabilityUserScript()
+        let request = URLRequest(url: url)
+        webView.load(request)
+    }
+    
+    private func addReadabilityUserScript() {
+        
+    }
+    
+    // ***************************
+    //  MARK: WKNavigationDelegate
+    // ***************************
+    
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        
     }
 }
 

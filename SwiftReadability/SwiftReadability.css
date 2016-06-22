@@ -1,0 +1,7 @@
+/* Extensions to Mozilla's Reader.css */
+
+#reader-content {
+    display: block;
+}
+
+/* TODO: Fonts! */
