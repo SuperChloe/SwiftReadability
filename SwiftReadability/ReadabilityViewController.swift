@@ -12,12 +12,21 @@ import WebKit
 
 public class ReadabilityViewController: UIViewController {
     let webView = WKWebView()
+    private var inProgressReadability: Readability?
     
     override public func loadView() {
         view = webView
+        
+        view.backgroundColor = UIColor.blue()
     }
     
-    public func loadURL(url: NSURL) {
-        
+    public func loadURL(url: URL) {
+        inProgressReadability = Readability(url: url) { [weak self] (content, error) in
+            guard let content = content else { return }
+            
+            _ = self?.webView.loadHTMLString(content, baseURL: url)
+            
+            self?.inProgressReadability = nil
+        }
     }
 }

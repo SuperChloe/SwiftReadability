@@ -68,7 +68,7 @@ public class Readability: NSObject, WKNavigationDelegate {
         
         webView.evaluateJavaScript(readabillityInitializationJS) { [weak self] (result, error) in
             guard let result = result as? String else { return }
-            guard let html = self?.renderHTML(result) else { return }
+            guard let html = self?.renderHTML(readabilityContent: result) else { return }
             self?.completionHandler(content: html, error: error)
         }
     }
