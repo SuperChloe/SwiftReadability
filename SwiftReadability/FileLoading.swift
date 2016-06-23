@@ -12,7 +12,7 @@ enum FileLoadingError: ErrorProtocol {
     case InvalidPath
 }
 
-private func loadFile(name: String, type: String) throws -> String {
+func loadFile(name: String, type: String) throws -> String {
     guard let filePath = Bundle.main().pathForResource(name, ofType: type) else {
         throw FileLoadingError.InvalidPath
     }

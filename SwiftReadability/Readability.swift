@@ -30,6 +30,11 @@ public class Readability: NSObject, WKNavigationDelegate {
     }
     
     private func addReadabilityUserScript() {
+        let script = ReadabilityUserScript()
+        webView.configuration.userContentController.addUserScript(script)
+    }
+    
+    private func renderHTML() {
         
     }
     
@@ -38,7 +43,18 @@ public class Readability: NSObject, WKNavigationDelegate {
     // ***************************
     
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let readabillityInitializationJS: String
+        do {
+            readabillityInitializationJS = try loadFile(name: "readability_initialization", type: "js")
+        } catch {
+            fatalError("Couldn't load readability_initialization.js")
+        }
         
+        webView.evaluateJavaScript(readabillityInitializationJS) { [weak self] (result, error) in
+            guard let result = result as? String else { return }
+            guard let html = self?.renderHTML(result) else { return }
+            self?.completionHandler(content: html, error: error)
+        }
     }
 }
 
