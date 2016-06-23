@@ -17,6 +17,7 @@
 		89DDEBB81D1B54790043F6AD /* Readability.js in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB31D1B54790043F6AD /* Readability.js */; };
 		89DDEBB91D1B54790043F6AD /* Reader.css in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB41D1B54790043F6AD /* Reader.css */; };
 		89DDEBBA1D1B54790043F6AD /* Reader.html.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB51D1B54790043F6AD /* Reader.html.mustache */; };
+		89DDEBBC1D1B55A30043F6AD /* FileLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDEBBB1D1B55A30043F6AD /* FileLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		89DDEBB31D1B54790043F6AD /* Readability.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Readability.js; sourceTree = "<group>"; };
 		89DDEBB41D1B54790043F6AD /* Reader.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Reader.css; sourceTree = "<group>"; };
 		89DDEBB51D1B54790043F6AD /* Reader.html.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Reader.html.mustache; sourceTree = "<group>"; };
+		89DDEBBB1D1B55A30043F6AD /* FileLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				89DDEBB51D1B54790043F6AD /* Reader.html.mustache */,
 				891E483A1D18BDD5003205F5 /* SwiftReadability.h */,
 				89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */,
+				89DDEBBB1D1B55A30043F6AD /* FileLoading.swift */,
 				89DDEBAD1D18C8D90043F6AD /* Readability.swift */,
 				891E483C1D18BDD5003205F5 /* Info.plist */,
 			);
@@ -182,6 +185,7 @@
 			files = (
 				89DDEBAE1D18C8D90043F6AD /* Readability.swift in Sources */,
 				89DDEBA71D18C5ED0043F6AD /* ReadabilityViewController.swift in Sources */,
+				89DDEBBC1D1B55A30043F6AD /* FileLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
