@@ -34,8 +34,24 @@ public class Readability: NSObject, WKNavigationDelegate {
         webView.configuration.userContentController.addUserScript(script)
     }
     
-    private func renderHTML() {
-        
+    private func renderHTML(readabilityContent: String) -> String {
+        do {
+            let template = try loadFile(name: "Reader.html", type: "template")
+            
+            let mozillaCSS = try loadFile(name: "Reader", type: "css")
+            let swiftReadabilityCSS = try loadFile(name: "SwiftReadability", type: "css")
+            let css = mozillaCSS + swiftReadabilityCSS
+            
+            let html = template
+                .replacingOccurrences(of: "##CSS##", with: css)
+                .replacingOccurrences(of: "##CONTENT##", with: readabilityContent)
+            
+            return html
+            
+        } catch {
+            // TODO: Need better error handling
+            fatalError("Failed to render Readability HTML")
+        }
     }
     
     // ***************************

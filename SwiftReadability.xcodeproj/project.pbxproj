@@ -17,7 +17,7 @@
 		89DDEBB71D1B54790043F6AD /* readability_initialization.js in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB21D1B54790043F6AD /* readability_initialization.js */; };
 		89DDEBB81D1B54790043F6AD /* Readability.js in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB31D1B54790043F6AD /* Readability.js */; };
 		89DDEBB91D1B54790043F6AD /* Reader.css in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB41D1B54790043F6AD /* Reader.css */; };
-		89DDEBBA1D1B54790043F6AD /* Reader.html.moustache in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB51D1B54790043F6AD /* Reader.html.moustache */; };
+		89DDEBBA1D1B54790043F6AD /* Reader.html.template in Resources */ = {isa = PBXBuildFile; fileRef = 89DDEBB51D1B54790043F6AD /* Reader.html.template */; };
 		89DDEBBC1D1B55A30043F6AD /* FileLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDEBBB1D1B55A30043F6AD /* FileLoading.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 		89DDEBB21D1B54790043F6AD /* readability_initialization.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = readability_initialization.js; sourceTree = "<group>"; };
 		89DDEBB31D1B54790043F6AD /* Readability.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Readability.js; sourceTree = "<group>"; };
 		89DDEBB41D1B54790043F6AD /* Reader.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Reader.css; sourceTree = "<group>"; };
-		89DDEBB51D1B54790043F6AD /* Reader.html.moustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Reader.html.moustache; sourceTree = "<group>"; };
+		89DDEBB51D1B54790043F6AD /* Reader.html.template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Reader.html.template; sourceTree = "<group>"; };
 		89DDEBBB1D1B55A30043F6AD /* FileLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileLoading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 				89DDEBB21D1B54790043F6AD /* readability_initialization.js */,
 				89DDEBB31D1B54790043F6AD /* Readability.js */,
 				89DDEBB41D1B54790043F6AD /* Reader.css */,
-				89DDEBB51D1B54790043F6AD /* Reader.html.moustache */,
+				89DDEBB51D1B54790043F6AD /* Reader.html.template */,
 				891E483A1D18BDD5003205F5 /* SwiftReadability.h */,
 				89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */,
 				89DDEBBB1D1B55A30043F6AD /* FileLoading.swift */,
@@ -172,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DDEBB91D1B54790043F6AD /* Reader.css in Resources */,
-				89DDEBBA1D1B54790043F6AD /* Reader.html.moustache in Resources */,
+				89DDEBBA1D1B54790043F6AD /* Reader.html.template in Resources */,
 				89DDEBB61D1B54790043F6AD /* SwiftReadability.css in Resources */,
 				89DDEBB81D1B54790043F6AD /* Readability.js in Resources */,
 				89DDEBB71D1B54790043F6AD /* readability_initialization.js in Resources */,
