@@ -13,7 +13,8 @@ enum FileLoadingError: ErrorProtocol {
 }
 
 func loadFile(name: String, type: String) throws -> String {
-    guard let filePath = Bundle.main().pathForResource(name, ofType: type) else {
+    let bundle = Bundle(for: Readability.self)
+    guard let filePath = bundle.pathForResource(name, ofType: type) else {
         throw FileLoadingError.InvalidPath
     }
     

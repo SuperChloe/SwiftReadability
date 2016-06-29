@@ -36,7 +36,7 @@ public class Readability: NSObject, WKNavigationDelegate {
     
     private func renderHTML(readabilityContent: String) -> String {
         do {
-            let template = try loadFile(name: "Reader.html", type: "template")
+            let template = try loadFile(name: "Reader.template", type: "html")
             
             let mozillaCSS = try loadFile(name: "Reader", type: "css")
             let swiftReadabilityCSS = try loadFile(name: "SwiftReadability", type: "css")
