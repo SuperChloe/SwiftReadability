@@ -6,42 +6,37 @@
 
 function updateImageMargins() {
     var BLOCK_IMAGES_SELECTOR = ".content p > img:only-child, " +
-        ".content p > a:only-child > img:only-child, " +
-        ".content .wp-caption img, " +
-        ".content figure img";
-
+    ".content p > a:only-child > img:only-child, " +
+    ".content .wp-caption img, " +
+    ".content figure img";
+    
     var contentElement = document.getElementById('reader-content');
-
-    var windowWidth = window.innerWidth;
-    var contentWidth = contentElement.offsetWidth;
-    var maxWidthStyle = windowWidth + "px !important";
-
+    
+    var maxWidthStyle = "100% !important";
+    
     var setImageMargins = function(img) {
         if (!img._originalWidth) {
             img._originalWidth = img.offsetWidth;
         }
-
+        
         var imgWidth = img._originalWidth;
-
+        
         // If the image is taking more than half of the screen, just make
         // it fill edge-to-edge.
-        if (imgWidth < contentWidth && imgWidth > windowWidth * 0.55) {
-            imgWidth = windowWidth;
+        if (imgWidth > screen.width * 0.55) {
+            imgWidth = screen.width;
         }
-
-        var sideMargin = Math.max((contentWidth - windowWidth) / 2, (contentWidth - imgWidth) / 2);
-
-        var imageStyle = sideMargin + "px !important";
+        
         var widthStyle = imgWidth + "px !important";
-
+        
         var cssText = "max-width: " + maxWidthStyle + ";" +
-            "width: " + widthStyle + ";" +
-            "margin-left: " + imageStyle + ";" +
-            "margin-right: " + imageStyle + ";";
-
+        "width: " + widthStyle + ";" +
+        "margin-left: auto;" +
+        "margin-right: auto;";
+        
         img.style.cssText = cssText;
     }
-
+    
     var imgs = document.querySelectorAll(BLOCK_IMAGES_SELECTOR);
     for (var i = imgs.length; --i >= 0;) {
         var img = imgs[i];

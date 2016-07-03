@@ -12,8 +12,23 @@
 		891538CA1D248BCB00BAB813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891538C81D248BCB00BAB813 /* Main.storyboard */; };
 		891538CC1D248BCB00BAB813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891538CB1D248BCB00BAB813 /* Assets.xcassets */; };
 		891538CF1D248BCB00BAB813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891538CD1D248BCB00BAB813 /* LaunchScreen.storyboard */; };
-		891538EE1D248C6B00BAB813 /* SwiftReadability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891538ED1D248C6B00BAB813 /* SwiftReadability.framework */; };
+		891538F61D29DD1B00BAB813 /* SwiftReadability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891538F51D29DD1B00BAB813 /* SwiftReadability.framework */; };
+		891538F71D29DD1B00BAB813 /* SwiftReadability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 891538F51D29DD1B00BAB813 /* SwiftReadability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		891538F81D29DD1B00BAB813 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				891538F71D29DD1B00BAB813 /* SwiftReadability.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		891538C11D248BCB00BAB813 /* SwiftReadabilityExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftReadabilityExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +39,7 @@
 		891538CE1D248BCB00BAB813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		891538D01D248BCB00BAB813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		891538ED1D248C6B00BAB813 /* SwiftReadability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftReadability.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftReadability-fktgjfhnivvydvgvpkdgaewyjctd/Build/Products/Debug-iphonesimulator/SwiftReadability.framework"; sourceTree = "<group>"; };
+		891538F51D29DD1B00BAB813 /* SwiftReadability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftReadability.framework; path = "/Users/Chloe/Library/Developer/Xcode/DerivedData/SwiftReadability-fktgjfhnivvydvgvpkdgaewyjctd/Build/Products/Debug-iphoneos/SwiftReadability.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891538EE1D248C6B00BAB813 /* SwiftReadability.framework in Frameworks */,
+				891538F61D29DD1B00BAB813 /* SwiftReadability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +57,7 @@
 		891538B81D248BCB00BAB813 = {
 			isa = PBXGroup;
 			children = (
+				891538F51D29DD1B00BAB813 /* SwiftReadability.framework */,
 				891538C31D248BCB00BAB813 /* SwiftReadabilityExample */,
 				891538C21D248BCB00BAB813 /* Products */,
 				891538EC1D248C6B00BAB813 /* Frameworks */,
@@ -86,6 +103,7 @@
 				891538BD1D248BCB00BAB813 /* Sources */,
 				891538BE1D248BCB00BAB813 /* Frameworks */,
 				891538BF1D248BCB00BAB813 /* Resources */,
+				891538F81D29DD1B00BAB813 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -256,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
