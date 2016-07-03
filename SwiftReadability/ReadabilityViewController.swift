@@ -16,8 +16,6 @@ public class ReadabilityViewController: UIViewController {
     
     override public func loadView() {
         view = webView
-        
-        view.backgroundColor = UIColor.blue()
     }
     
     public func loadURL(url: URL) {

@@ -12,6 +12,7 @@ import WebKit
 public class Readability: NSObject, WKNavigationDelegate {
     private let webView: WKWebView
     private let completionHandler: ((content: String?, error: NSError?) -> Void)
+    private var hasRenderedReadabilityHTML = false
     
     init(url: URL, completionHandler: (content: String?, error: NSError?) -> Void) {
 
@@ -54,22 +55,62 @@ public class Readability: NSObject, WKNavigationDelegate {
         }
     }
     
+    private func initializeReadability(completionHandler: (html: String?, error: NSError?) -> Void) {
+        let readabilityInitializationJS: String
+        do {
+            readabilityInitializationJS = try loadFile(name: "readability_initialization", type: "js")
+        } catch {
+            fatalError("Couldn't load readability_initialization.js")
+        }
+        
+        webView.evaluateJavaScript(readabilityInitializationJS) { [weak self] (result, error) in
+            guard let result = result as? String else {
+                self?.completionHandler(content: nil, error: error)
+                return
+            }
+            guard let html = self?.renderHTML(readabilityContent: result) else { return }
+            completionHandler(html: html, error: nil)
+        }
+    }
+    
+    private func updateImageMargins(completionHandler: (html: String?, error: NSError?) -> Void) {
+        let readabilityImagesJS: String
+        do {
+            readabilityImagesJS = try loadFile(name: "readability_images", type: "js")
+        } catch {
+            fatalError("Couldn't load readability_images.js")
+        }
+        
+        webView.evaluateJavaScript(readabilityImagesJS) { [weak self] (result, error) in
+            guard let result = result as? String else {
+                self?.completionHandler(content: nil, error: error)
+                return
+            }
+            completionHandler(html: result, error: nil)
+        }
+    }
+    
     // ***************************
     //  MARK: WKNavigationDelegate
     // ***************************
     
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let readabillityInitializationJS: String
-        do {
-            readabillityInitializationJS = try loadFile(name: "readability_initialization", type: "js")
-        } catch {
-            fatalError("Couldn't load readability_initialization.js")
-        }
-        
-        webView.evaluateJavaScript(readabillityInitializationJS) { [weak self] (result, error) in
-            guard let result = result as? String else { return }
-            guard let html = self?.renderHTML(readabilityContent: result) else { return }
-            self?.completionHandler(content: html, error: error)
+        if !hasRenderedReadabilityHTML {
+            initializeReadability() { [weak self] (html: String?, error: NSError?) in
+                self?.hasRenderedReadabilityHTML = true
+                guard let html = html else {
+                    self?.completionHandler(content: nil, error: error)
+                    return
+                }
+                self?.webView.loadHTMLString(html, baseURL: self?.webView.url?.baseURL)
+            }
+        } else {
+            updateImageMargins() { [weak self] (html: String?, error: NSError?) in
+                if let f = html {
+                    print(f)
+                }
+                self?.completionHandler(content: html, error: error)
+            }
         }
     }
 }

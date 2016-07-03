@@ -13,6 +13,7 @@
 		891538E61D248BFF00BAB813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891538DC1D248BFF00BAB813 /* Main.storyboard */; };
 		891538E71D248BFF00BAB813 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891538DE1D248BFF00BAB813 /* Info.plist */; };
 		891538E81D248BFF00BAB813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891538DF1D248BFF00BAB813 /* ViewController.swift */; };
+		891538F01D29C1CE00BAB813 /* readability_images.js in Resources */ = {isa = PBXBuildFile; fileRef = 891538EF1D29C1CE00BAB813 /* readability_images.js */; };
 		891E483B1D18BDD5003205F5 /* SwiftReadability.h in Headers */ = {isa = PBXBuildFile; fileRef = 891E483A1D18BDD5003205F5 /* SwiftReadability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		899E47BF1D1B760F00A44BB9 /* ReadabilityUserScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899E47BE1D1B760F00A44BB9 /* ReadabilityUserScript.swift */; };
 		89DDEBA71D18C5ED0043F6AD /* ReadabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */; };
@@ -45,6 +46,7 @@
 		891538DE1D248BFF00BAB813 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		891538DF1D248BFF00BAB813 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		891538E01D248BFF00BAB813 /* SwiftReadabilityExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftReadabilityExample.xcodeproj; sourceTree = "<group>"; };
+		891538EF1D29C1CE00BAB813 /* readability_images.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = readability_images.js; sourceTree = "<group>"; };
 		891E48371D18BDD5003205F5 /* SwiftReadability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftReadability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891E483A1D18BDD5003205F5 /* SwiftReadability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftReadability.h; sourceTree = "<group>"; };
 		891E483C1D18BDD5003205F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				89DDEBB11D1B54790043F6AD /* SwiftReadability.css */,
 				89DDEBB21D1B54790043F6AD /* readability_initialization.js */,
 				89DDEBB31D1B54790043F6AD /* Readability.js */,
+				891538EF1D29C1CE00BAB813 /* readability_images.js */,
 				89DDEBB41D1B54790043F6AD /* Reader.css */,
 				89DDEBB51D1B54790043F6AD /* Reader.template.html */,
 				891E483A1D18BDD5003205F5 /* SwiftReadability.h */,
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DDEBB91D1B54790043F6AD /* Reader.css in Resources */,
+				891538F01D29C1CE00BAB813 /* readability_images.js in Resources */,
 				89DDEBBA1D1B54790043F6AD /* Reader.template.html in Resources */,
 				891538E71D248BFF00BAB813 /* Info.plist in Resources */,
 				89DDEBB61D1B54790043F6AD /* SwiftReadability.css in Resources */,
