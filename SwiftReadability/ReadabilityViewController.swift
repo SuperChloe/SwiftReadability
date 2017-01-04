@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 import WebKit
 
-public class ReadabilityViewController: UIViewController {
+open class ReadabilityViewController: UIViewController {
     let webView = WKWebView()
     private var inProgressReadability: Readability?
     
-    override public func loadView() {
+    override open func loadView() {
         view = webView
     }
     
