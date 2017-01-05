@@ -543,6 +543,7 @@
 				89C9AFE21E1DF28700CDC566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
