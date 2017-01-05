@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		891538E31D248BFF00BAB813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891538D81D248BFF00BAB813 /* AppDelegate.swift */; };
-		891538E41D248BFF00BAB813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891538D91D248BFF00BAB813 /* Assets.xcassets */; };
-		891538E51D248BFF00BAB813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891538DA1D248BFF00BAB813 /* LaunchScreen.storyboard */; };
-		891538E61D248BFF00BAB813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891538DC1D248BFF00BAB813 /* Main.storyboard */; };
-		891538E71D248BFF00BAB813 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891538DE1D248BFF00BAB813 /* Info.plist */; };
-		891538E81D248BFF00BAB813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891538DF1D248BFF00BAB813 /* ViewController.swift */; };
 		891538F01D29C1CE00BAB813 /* readability_images.js in Resources */ = {isa = PBXBuildFile; fileRef = 891538EF1D29C1CE00BAB813 /* readability_images.js */; };
 		891E483B1D18BDD5003205F5 /* SwiftReadability.h in Headers */ = {isa = PBXBuildFile; fileRef = 891E483A1D18BDD5003205F5 /* SwiftReadability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		899E47BF1D1B760F00A44BB9 /* ReadabilityUserScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899E47BE1D1B760F00A44BB9 /* ReadabilityUserScript.swift */; };
+		89C9AFE31E1DF28F00CDC566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891538D81D248BFF00BAB813 /* AppDelegate.swift */; };
+		89C9AFE41E1DF29200CDC566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891538D91D248BFF00BAB813 /* Assets.xcassets */; };
+		89C9AFE51E1DF29500CDC566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891538DA1D248BFF00BAB813 /* LaunchScreen.storyboard */; };
+		89C9AFE61E1DF29900CDC566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891538DC1D248BFF00BAB813 /* Main.storyboard */; };
+		89C9AFE71E1DF29C00CDC566 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891538DE1D248BFF00BAB813 /* Info.plist */; };
+		89C9AFE81E1DF29F00CDC566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891538DF1D248BFF00BAB813 /* ViewController.swift */; };
 		89DDEBA71D18C5ED0043F6AD /* ReadabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */; };
 		89DDEBAA1D18C63B0043F6AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DDEBA91D18C63B0043F6AD /* UIKit.framework */; };
 		89DDEBAC1D18C6420043F6AD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DDEBAB1D18C6420043F6AD /* WebKit.framework */; };
@@ -51,6 +51,7 @@
 		891E483A1D18BDD5003205F5 /* SwiftReadability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftReadability.h; sourceTree = "<group>"; };
 		891E483C1D18BDD5003205F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		899E47BE1D1B760F00A44BB9 /* ReadabilityUserScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadabilityUserScript.swift; sourceTree = "<group>"; };
+		89C9AFD11E1DF28600CDC566 /* SwiftReadabilityExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftReadabilityExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DDEBA61D18C5ED0043F6AD /* ReadabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadabilityViewController.swift; sourceTree = "<group>"; };
 		89DDEBA91D18C63B0043F6AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89DDEBAB1D18C6420043F6AD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -71,6 +72,13 @@
 			files = (
 				89DDEBAC1D18C6420043F6AD /* WebKit.framework in Frameworks */,
 				89DDEBAA1D18C63B0043F6AD /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C9AFCE1E1DF28600CDC566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				891E48371D18BDD5003205F5 /* SwiftReadability.framework */,
+				89C9AFD11E1DF28600CDC566 /* SwiftReadabilityExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,13 +195,31 @@
 			productReference = 891E48371D18BDD5003205F5 /* SwiftReadability.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		89C9AFD01E1DF28600CDC566 /* SwiftReadabilityExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89C9AFE01E1DF28700CDC566 /* Build configuration list for PBXNativeTarget "SwiftReadabilityExample" */;
+			buildPhases = (
+				89C9AFCD1E1DF28600CDC566 /* Sources */,
+				89C9AFCE1E1DF28600CDC566 /* Frameworks */,
+				89C9AFCF1E1DF28600CDC566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftReadabilityExample;
+			productName = SwiftReadabilityExample;
+			productReference = 89C9AFD11E1DF28600CDC566 /* SwiftReadabilityExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		891E482E1D18BDD5003205F5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Chloe Horgan";
 				TargetAttributes = {
 					891E48361D18BDD5003205F5 = {
@@ -200,6 +227,11 @@
 						DevelopmentTeam = U88Q589DZB;
 						DevelopmentTeamName = "Chloe Horgan";
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					89C9AFD01E1DF28600CDC566 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U88Q589DZB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -224,6 +256,7 @@
 			projectRoot = "";
 			targets = (
 				891E48361D18BDD5003205F5 /* SwiftReadability */,
+				89C9AFD01E1DF28600CDC566 /* SwiftReadabilityExample */,
 			);
 		};
 /* End PBXProject section */
@@ -246,13 +279,20 @@
 				89DDEBB91D1B54790043F6AD /* Reader.css in Resources */,
 				891538F01D29C1CE00BAB813 /* readability_images.js in Resources */,
 				89DDEBBA1D1B54790043F6AD /* Reader.template.html in Resources */,
-				891538E71D248BFF00BAB813 /* Info.plist in Resources */,
 				89DDEBB61D1B54790043F6AD /* SwiftReadability.css in Resources */,
-				891538E61D248BFF00BAB813 /* Main.storyboard in Resources */,
 				89DDEBB81D1B54790043F6AD /* Readability.js in Resources */,
-				891538E51D248BFF00BAB813 /* LaunchScreen.storyboard in Resources */,
-				891538E41D248BFF00BAB813 /* Assets.xcassets in Resources */,
 				89DDEBB71D1B54790043F6AD /* readability_initialization.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C9AFCF1E1DF28600CDC566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C9AFE41E1DF29200CDC566 /* Assets.xcassets in Resources */,
+				89C9AFE61E1DF29900CDC566 /* Main.storyboard in Resources */,
+				89C9AFE51E1DF29500CDC566 /* LaunchScreen.storyboard in Resources */,
+				89C9AFE71E1DF29C00CDC566 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,12 +303,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891538E81D248BFF00BAB813 /* ViewController.swift in Sources */,
 				899E47BF1D1B760F00A44BB9 /* ReadabilityUserScript.swift in Sources */,
 				89DDEBAE1D18C8D90043F6AD /* Readability.swift in Sources */,
 				89DDEBA71D18C5ED0043F6AD /* ReadabilityViewController.swift in Sources */,
-				891538E31D248BFF00BAB813 /* AppDelegate.swift in Sources */,
 				89DDEBBC1D1B55A30043F6AD /* FileLoading.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C9AFCD1E1DF28600CDC566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C9AFE31E1DF28F00CDC566 /* AppDelegate.swift in Sources */,
+				89C9AFE81E1DF29F00CDC566 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +356,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -360,8 +409,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -393,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -414,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -426,6 +479,38 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chloehorgan.SwiftReadability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		89C9AFE11E1DF28700CDC566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = U88Q589DZB;
+				INFOPLIST_FILE = SwiftReadabilityExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chloehorgan.SwiftReadabilityExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		89C9AFE21E1DF28700CDC566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = U88Q589DZB;
+				INFOPLIST_FILE = SwiftReadabilityExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chloehorgan.SwiftReadabilityExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -450,6 +535,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		89C9AFE01E1DF28700CDC566 /* Build configuration list for PBXNativeTarget "SwiftReadabilityExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C9AFE11E1DF28700CDC566 /* Debug */,
+				89C9AFE21E1DF28700CDC566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

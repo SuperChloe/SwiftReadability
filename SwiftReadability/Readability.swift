@@ -102,7 +102,7 @@ public class Readability: NSObject, WKNavigationDelegate {
                     self?.completionHandler(nil, error)
                     return
                 }
-                self?.webView.loadHTMLString(html, baseURL: self?.webView.url?.baseURL)
+                _ = self?.webView.loadHTMLString(html, baseURL: self?.webView.url?.baseURL)
             }
         } else {
             updateImageMargins() { [weak self] (html: String?, error: Error?) in
