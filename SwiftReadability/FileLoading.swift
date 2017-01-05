@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum FileLoadingError: ErrorProtocol {
+enum FileLoadingError: Error {
     case InvalidPath
 }
 
 func loadFile(name: String, type: String) throws -> String {
     let bundle = Bundle(for: Readability.self)
-    guard let filePath = bundle.pathForResource(name, ofType: type) else {
+    guard let filePath = bundle.path(forResource: name, ofType: type) else {
         throw FileLoadingError.InvalidPath
     }
     
